@@ -11,7 +11,7 @@ class Animal {
 
   // Method to make sound
   makeSound(sound) {
-    console.log(`The ${sound} makes a sound`);
+    console.log(`The ${this.sound} makes a sound`);
   }
 }
 
