@@ -1,40 +1,48 @@
 //complete this code
 class Animal {
-	constructor(species){
-		this.species=species;
-	}
-	get species(){
-		return this.species
-	}
-	makeSound(){
-		console.log('Animal Sound');
-	}
-}
+  constructor(species) {
+    this._species = species;
+  }
 
-class Dog extends Animal {
-	bark(){
-		console.log('woof');
-	}
+  // Getter for species
+  get species() {
+    return this._species;
+  }
+
+  // Method to make sound
+  makeSound() {
+    console.log("Animal sound");
+  }
 }
 
 class Cat extends Animal {
-	purr(){
-		console.log('purr');
-	}
+  // Method for purring
+  purr() {
+    console.log("purr");
+  }
 }
-const animal = new Animal('Unknown');
-console.log(animal.species);
-animal.makeSound();
 
-const cat = new Cat('Felis catus');
-console.log(cat.species);
-cat.makeSound();
-cat.purr();
+class Dog extends Animal {
+  // Method for barking
+  bark() {
+    console.log("woof");
+  }
+}
 
-const dog = new Dog();
-console.log(dog.species);
-dog.makeSound();
-dog.bark();
+const animal = new Animal("Unknown");
+console.log(animal.species); // Output: Unknown
+animal.makeSound(); // Output: Animal sound
+
+const cat = new Cat("Felis catus");
+console.log(cat.species); // Output: Felis catus
+cat.makeSound(); // Output: Animal sound
+cat.purr(); // Output: purr
+
+const dog = new Dog("Canis lupus familiaris");
+console.log(dog.species); // Output: Canis lupus familiaris
+dog.makeSound(); // Output: Animal sound
+dog.bark(); // Output: woof
+
 
 // Do not change the code below this line
 window.Animal = Animal;
