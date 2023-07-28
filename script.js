@@ -11,7 +11,7 @@ class Animal {
 
   // Method to make sound
   makeSound(sound) {
-    console.log(${sound});
+    console.log(`The ${sound} makes a sound`);
   }
 }
 
@@ -31,16 +31,16 @@ class Dog extends Animal {
 
 const animal = new Animal("Unknown");
 console.log(animal.species); // Output: Unknown
-animal.makeSound("Animal Sound"); // Output: Animal sound
+animal.makeSound("Animal"); // Output: Animal sound
 
 const cat = new Cat("Felis catus");
 console.log(cat.species); // Output: Felis catus
-cat.makeSound("The Siamese makes a sound"); // Output: Animal sound
+cat.makeSound("Siamese"); // Output: Animal sound
 cat.purr(); // Output: purr
 
 const dog = new Dog("Canis lupus familiaris");
 console.log(dog.species); // Output: Canis lupus familiaris
-dog.makeSound("The Golden Retriever makes a sound" ); // Output: Animal sound
+dog.makeSound("Golden Retriever"); // Output: Animal sound
 dog.bark(); // Output: woof
 
 
